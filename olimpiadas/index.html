@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #333;
+      padding: 1rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #555;
+      border-radius: 5px;
+    }
+    .navbar a:hover {
+      background-color: #777;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .form-section {
+      display: none;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #333;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form input[type="submit"] {
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      width: 100%;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background-color: #3498db;
+    }
+    #productos {
+      display: block;
+    }
+  </style>
+  <script>
+    function mostrarFormulario(id) {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('registro').style.display = 'none';
+      document.getElementById('productos').style.display = 'none';
+
+      if (id !== '') {
+        document.getElementById(id).style.display = 'block';
+      } else {
+        document.getElementById('productos').style.display = 'block';
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#" onclick="mostrarFormulario('')">Inicio</a>
+    <a href="#" onclick="mostrarFormulario('login')">Login</a>
+    <a href="#" onclick="mostrarFormulario('registro')">Registro</a>
+  </div>
+
+  <div class="container">
+
+    <div id="productos">
+      <h2>Productos Disponibles</h2>
+      <!-- Aquí iría la integración con lista_productos.php o una tabla dinámica -->
+      <p>Mostrando productos...</p>
+      <!-- Podés insertar un iframe o resultado dinámico con JavaScript o PHP -->
+    </div>
+
+    <div id="login" class="form-section">
+      <h2>Iniciar Sesión</h2>
+      <form action="login.php" method="POST">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <input type="submit" value="Ingresar">
+      </form>
+    </div>
+
+    <div id="registro" class="form-section">
+      <h2>Registrar Usuario</h2>
+      <form action="registro.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="email_reg">Correo electrónico:</label>
+        <input type="email" id="email_reg" name="email" required>
+
+        <label for="contrasena_reg">Contraseña:</label>
+        <input type="password" id="contrasena_reg" name="contrasena" required>
+
+        <input type="submit" value="Registrar">
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

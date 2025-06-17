@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #87CEEB, #FFA07A);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario-container {
+  width: 90%;
+  max-width: 400px;
+}
+
+form {
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: none;
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+h2 {
+  color: #004d80;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #ff8c00;
+}
+
+.link-opcion {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.link-opcion a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link-opcion a:hover {
+  color: #004d80;
+}
+
+/* Mensaje sesión cerrada en verde */
+.mensaje-exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 10px 15px;
+  margin-top: 8px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensajes de error en rojo */
+.error {
+  background-color: #ffe0e0;
+  color: #cc0000;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}

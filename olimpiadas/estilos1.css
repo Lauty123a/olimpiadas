@@ -1,0 +1,182 @@
+/* estilos.css */
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Fondo y cuerpo */
+body {
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    max-width: 1100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.navbar .logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.navbar .bienvenida {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2980b9;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: 600;
+    border: 2px solid #e74c3c;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    max-width: 1100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2 {
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+/* Mensajes */
+.container p {
+    font-size: 1.1rem;
+}
+
+.container p[style] {
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Labels y inputs */
+label {
+    flex: 1 0 100%;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+textarea {
+    flex: 1 0 100%;
+    padding: 10px 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus,
+textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Textarea altura */
+textarea {
+    min-height: 100px;
+}
+
+/* Botón submit */
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    flex: 1 0 100%;
+    max-width: 200px;
+}
+
+input[type="submit"]:hover {
+    background-color: #1c5980;
+}
+
+/* Sección de actualización */
+section p a {
+    color: #2980b9;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+section p a:hover {
+    border-color: #2980b9;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    form label {
+        flex: 1 0 48%;
+    }
+    form input[type="submit"] {
+        flex: 1 0 auto;
+        margin-top: 30px;
+    }
+}
